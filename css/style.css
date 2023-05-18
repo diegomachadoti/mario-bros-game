@@ -21,7 +21,7 @@
     width: 80px;
     /*right: -80px;  Animação começar antes do quadro*/
     /*left: 120px;  limite do objeto pipe enconstando no objeto mario */
-    animation: pipe-animation 1.3s infinite linear; /* Chamando a animação velocidade*/
+    animation: pipe-animation 2s infinite linear; /* Chamando a animação velocidade*/
 }
 
 /* Objeto pipe */
@@ -51,6 +51,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 
 #audioContainer {
     position: absolute;

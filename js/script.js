@@ -24,12 +24,12 @@ const jump = () => {
 const loop = setInterval(() => {
 
     console.log('loop')
+    playMusic();
 
     const pipePosition = pipe.offsetLeft; // delocamento esquerdo
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px',''); // trazer a altura e intervalo da posição do mario de acordo com o pulo (+ converte para inteiro)
     //console.log(pipePosition)
     //console.log(marioPosition)
-
 
     /* Se posicição do pipe com o mario 120 || posição do pipe > 0 || posição do mario com jump ao pipe*/
     if(pipePosition <= 120 && pipePosition > 0 && marioPosition < 96){
@@ -49,7 +49,7 @@ const loop = setInterval(() => {
 
         // para o loop apos gameOver
         clearInterval(loop);
-        //pauseMusic();
+        pauseMusic();
         
     }
 
@@ -58,19 +58,14 @@ const loop = setInterval(() => {
 
 /* Função para tocar música */
 function playMusic() {
-    var audio = document.getElementById('audioContainer');
-    audio.play();
-  
- 
-//   var audio = document.querySelector('.music-player');
-//   audio.play();
+    document.getElementById('audioContainer').play();
+  }
+
+function pauseMusic() {
+  var audio = document.getElementById('audioContainer');
+  audio.pause();
 }
 
-// function pauseMusic() {
-//   var audio = document.querySelector('.music-player');
-//   audio.pause();
-// }
   
-
 /* Escutar o evento do teclado */
 document.addEventListener('keydown', jump) 
