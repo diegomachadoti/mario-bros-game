@@ -49,7 +49,7 @@ const loop = setInterval(() => {
 
         // para o loop apos gameOver
         clearInterval(loop);
-        pauseMusic();
+        //pauseMusic();
         
     }
 
@@ -58,21 +58,18 @@ const loop = setInterval(() => {
 
 /* Função para tocar música */
 function playMusic() {
-  var audio = document.querySelector('.music-player');
-  audio.play();
+    var audio = document.getElementById('audioContainer');
+    audio.play();
+  
+ 
+//   var audio = document.querySelector('.music-player');
+//   audio.play();
 }
 
-function pauseMusic() {
-  var audio = document.querySelector('.music-player');
-  audio.pause();
-}
-
-
-
-// function exibirMensagem() {
-//     var elemento = document.getElementById('mensagem');
-//     elemento.textContent = 'GAME OVER!';
-//   }
+// function pauseMusic() {
+//   var audio = document.querySelector('.music-player');
+//   audio.pause();
+// }
   
 
 /* Escutar o evento do teclado */
