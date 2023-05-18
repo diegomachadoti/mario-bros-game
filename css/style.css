@@ -42,6 +42,19 @@
     animation: mario-jump-animation 500ms ease-out /* Chamando a animação */
 }
 
+.gameOver {
+    position: absolute;
+    width: 400px;
+    display: none;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
 /* Animação do objeto pipe */
 @keyframes pipe-animation {
     from{
@@ -92,3 +105,15 @@
     }
     
 }
+
+
+/* .message-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+} */

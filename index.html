@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width", initial-scale="1.0">
 
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .music-player {
+          display: none;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+      </style>
     <script src="./js/script.js" defer></script>
 
     <title>Mario Bros Game Jump</title>
@@ -12,13 +31,22 @@
 </head>
 <body>
 
+    <!-- <audio src="./music/mario-theme.mp3" autoplay loop>
+        Seu navegador não suporta a tag de áudio.
+    </audio> -->
+
+    <audio class="music-player" src="./music/mario-theme.mp3" loop></audio>
+    <button onclick="playMusic()">Reproduzir Música</button>
+    <button onclick="pauseMusic()">Pausar Música</button>
+
     <div class="game-board">
         <img src="./images/clouds.png" class="clouds">
         <img src="./images/mario.gif" class="mario">
         <img src="./images/pipe.png" class="pipe">
-
-
+        <img src="./images/mario-game-over.png" class="gameOver">
     </div>
-    
+
+    <!-- <div id="mensagem" class="message-container"></div> -->
+
 </body>
 </html>

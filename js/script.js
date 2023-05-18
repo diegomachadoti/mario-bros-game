@@ -2,6 +2,7 @@
 /* pegar o elemento da imagem do mario*/
 const mario = document.querySelector('.mario') 
 const pipe = document.querySelector('.pipe') 
+const gameOver = document.querySelector('.gameOver') 
 
 
 /* Logica para o Mario pular */
@@ -43,12 +44,36 @@ const loop = setInterval(() => {
         mario.style.width = '75px'
         mario.style.marginLeft = '50px'
 
+        gameOver.src = './images/mario-game-over.png'
+        gameOver.style.display = 'block'; 
+
         // para o loop apos gameOver
         clearInterval(loop);
-    
+        pauseMusic();
+        
     }
 
     }, 10)
+
+
+/* Função para tocar música */
+function playMusic() {
+  var audio = document.querySelector('.music-player');
+  audio.play();
+}
+
+function pauseMusic() {
+  var audio = document.querySelector('.music-player');
+  audio.pause();
+}
+
+
+
+// function exibirMensagem() {
+//     var elemento = document.getElementById('mensagem');
+//     elemento.textContent = 'GAME OVER!';
+//   }
+  
 
 /* Escutar o evento do teclado */
 document.addEventListener('keydown', jump) 
