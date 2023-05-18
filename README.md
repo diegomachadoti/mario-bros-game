@@ -1,8 +1,9 @@
 # mario-bros-game
-Projeto utilizando JS manipulando HTML com JS em uma game do Mario de pular obstáculos
+Projeto gamer utilizando HTML, JS e CSS do jogo do Mario Bros.
 
 ![mario-bros.png](mario-bros.png)
 
 
-**Executar o Game**
+## **Executar o Game**
+
 Abrir o arquivo **mario-bros-game/index.html** no seu navegador.
