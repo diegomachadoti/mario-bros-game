@@ -21,7 +21,7 @@
     width: 80px;
     /*right: -80px;  Animação começar antes do quadro*/
     /*left: 120px;  limite do objeto pipe enconstando no objeto mario */
-    animation: pipe-animation 1.0s infinite linear; /* Chamando a animação velocidade*/
+    animation: pipe-animation 1.3s infinite linear; /* Chamando a animação velocidade*/
 }
 
 /* Objeto pipe */
@@ -29,6 +29,13 @@
     position: absolute;
     bottom:0;  /*120px posição de jump do mario acima od pipe / 96px posiçao de altura que o jump encosta na pipe*/
     width: 150px;
+}
+
+/* Objeto nuvem */
+.clouds {
+    position: absolute;
+    width: 400px;
+    animation: clouds-animation 20s infinite linear;
 }
 
 .jump{
@@ -69,6 +76,19 @@
 
     100%{
         bottom: 0;
+    }
+    
+}
+
+/* Animação nuvem */
+@keyframes clouds-animation {
+    from{
+        right: -400px;
+    }
+
+    to{
+        right: 100%;
+
     }
     
 }
