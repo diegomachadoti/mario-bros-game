@@ -1,8 +1,8 @@
 # mario-bros-game
-Projeto gamer utilizando HTML, JS e CSS do jogo do Mario Bros.
 
-![mario-bros.png](mario-bros.png)
 ![game-mario.png](game-mario.png)
+**Projeto gamer utilizando HTML, JS e CSS do jogo do Mario Bros.**
+
 
 
 ## **Executar o Game**
