@@ -7,7 +7,7 @@
 ## **Executar o Game**
 
 -   Abrir o arquivo **mario-bros-game/index.html** no seu navegador.
--   Outra opção e ativar a extenção Live Server do vscode e start server local acessando atraves do endereço http://127.0.0.1:5500/
+-   Outra opção e ativar a extensão Live Server do vscode e start server local acessando atraves do endereço http://127.0.0.1:5500/
 
 ## Itens para evoluir
 
