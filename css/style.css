@@ -1,17 +1,17 @@
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .game-board {
     width: 100%;
     height: 500px;
-    border-bottom: 40px solid green;  /* grama do jogo*/
+    border-bottom: 40px solid green; /* grama do jogo*/
     margin: 0 auto;
     position: relative;
     overflow: hidden; /* Tudo que sair do quadro não aparecer */
-    background: linear-gradient(#87CEEB, #E0F6FF); /*fundo do jogo*/
+    background: linear-gradient(#87ceeb, #e0f6ff); /*fundo do jogo*/
 }
 
 /* Objeto pipe */
@@ -27,7 +27,7 @@
 /* Objeto pipe */
 .mario {
     position: absolute;
-    bottom:0;  /*120px posição de jump do mario acima od pipe / 96px posiçao de altura que o jump encosta na pipe*/
+    bottom: 0; /*120px posição de jump do mario acima od pipe / 96px posiçao de altura que o jump encosta na pipe*/
     width: 150px;
 }
 
@@ -38,8 +38,8 @@
     animation: clouds-animation 20s infinite linear;
 }
 
-.jump{
-    animation: mario-jump-animation 500ms ease-out /* Chamando a animação */
+.jump {
+    animation: mario-jump-animation 500ms ease-out; /* Chamando a animação */
 }
 
 .gameOver {
@@ -52,66 +52,56 @@
     margin-right: auto;
 }
 
-
 #audioContainer {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-  }
-  
-
+}
 
 /* Animação do objeto pipe */
 @keyframes pipe-animation {
-    from{
+    from {
         right: -80px;
     }
 
-    to{
+    to {
         right: 100%;
-
     }
-    
 }
 
 /* Animação do objeto mario pular */
 @keyframes mario-jump-animation {
-    
-    0%{
+    0% {
         bottom: 0;
     }
 
-    40%{
+    40% {
         bottom: 180px;
     }
 
-    50%{
+    50% {
         bottom: 180px;
     }
 
-    60%{
+    60% {
         bottom: 180px;
     }
 
-    100%{
+    100% {
         bottom: 0;
     }
-    
 }
 
 /* Animação nuvem */
 @keyframes clouds-animation {
-    from{
+    from {
         right: -400px;
     }
 
-    to{
+    to {
         right: 100%;
-
     }
-    
 }
-
 
 /* .message-container {
     position: absolute;

@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width"
+            ,
+            initial-scale="1.0"
+        />
 
-    <link rel="stylesheet" href="./css/style.css">
-    <style>
-        .music-player {
-          display: none;
-        }
+        <link rel="stylesheet" href="./css/style.css" />
+        <style>
+            .music-player {
+                display: none;
+            }
+        </style>
+        <script src="./js/script.js" defer></script>
 
-      </style>
-    <script src="./js/script.js" defer></script>
+        <title>Mario Bros Game Jump</title>
+    </head>
+    <body>
+        <div class="game-board">
+            <img src="./images/clouds.png" class="clouds" />
+            <img src="./images/mario.gif" class="mario" />
+            <img src="./images/pipe.png" class="pipe" />
+            <img src="./images/mario-game-over.png" class="gameOver" />
+        </div>
 
-    <title>Mario Bros Game Jump</title>
-
-</head>
-<body>
-
-    <div class="game-board">
-        <img src="./images/clouds.png" class="clouds">
-        <img src="./images/mario.gif" class="mario">
-        <img src="./images/pipe.png" class="pipe">
-        <img src="./images/mario-game-over.png" class="gameOver">
-    </div>
-
-    <div>
-        <audio id="audioContainer" controls>
-            <source src="./music/mario-theme.mp3" allow="autoplay" type="audio/mp3">
-        </audio>
-    </div>
-
-
-</body>
+        <div>
+            <audio id="audioContainer" controls>
+                <source
+                    src="./music/mario-theme.mp3"
+                    allow="autoplay"
+                    type="audio/mp3"
+                />
+            </audio>
+        </div>
+    </body>
 </html>
