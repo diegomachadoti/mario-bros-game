@@ -1,9 +1,55 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: 1;
+    padding: 1;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
+/*Fundo da página*/
+body {
+    background-color: rgb(30, 30, 30);
+    display: 200%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+}
+
+/*Botão cabeçalho*/
+button {
+    /*background-color: #000000;*/
+    position: fixed;
+    left: 13vw; /* Definir a posição horizontal usando vh o objeto fica fixo */
+    top: 40px; /* Definir a posição vertical em pixels */
+    /*right: 30vh;*/
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 125px;
+    margin-top: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: 2px solid #fc0000;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    overflow: hidden;
+    /*text-transform: uppercase;*/
+}
+button::before {
+    background: #3eff37;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: width 0.5s;
+}
+button:hover::before {
+    width: 50%;
+}
+
+/*Game*/
 .game-board {
     width: 100%;
     height: 500px;
@@ -38,10 +84,7 @@
     animation: clouds-animation 20s infinite linear;
 }
 
-.jump {
-    animation: mario-jump-animation 500ms ease-out; /* Chamando a animação */
-}
-
+/* Objeto gameOver */
 .gameOver {
     position: absolute;
     width: 400px;
@@ -50,8 +93,15 @@
     right: 0;
     margin-left: auto;
     margin-right: auto;
+    animation: fallAnimation 1s forwards;
 }
 
+/* função jump */
+.jump {
+    animation: mario-jump-animation 500ms ease-out; /* Chamando a animação */
+}
+
+/* config som */
 #audioContainer {
     position: absolute;
     left: 50%;
@@ -103,13 +153,11 @@
     }
 }
 
-/* .message-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-} */
+@keyframes fallAnimation {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

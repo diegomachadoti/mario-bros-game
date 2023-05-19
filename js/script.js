@@ -17,7 +17,7 @@ const jump = () => {
 /* Logica quando o deslocamento do pipe com o mario encostar o jogo acabe no caso fazer um replace na imagem do mario */
 const loop = setInterval(() => {
     console.log("loop");
-    // playMusic();
+      playMusic();
 
     const pipePosition = pipe.offsetLeft; // delocamento esquerdo
     const marioPosition = +window
@@ -45,6 +45,7 @@ const loop = setInterval(() => {
         // para o loop apos gameOver
         clearInterval(loop);
         pauseMusic();
+        playMusicGameOver();
     }
 }, 10);
 
@@ -54,7 +55,7 @@ const loop = setInterval(() => {
 
 // Atualizando a velocidade do pipe conforme o tempo
 var pipeElement = document.querySelector('.pipe');
-var initialDuration = 2; // Duração inicial da animação em segundos
+var initialDuration = 2  ; // Duração inicial da animação em segundos
 var animationStart = null;
 
 function increaseAnimationSpeed(timestamp) {
@@ -62,7 +63,7 @@ function increaseAnimationSpeed(timestamp) {
     animationStart = timestamp; // Salva o tempo de início da animação
   }
 
-  var elapsed = (timestamp - animationStart) / 10000; // Tempo decorrido em segundos
+  var elapsed = (timestamp - animationStart) / 50000; // Tempo decorrido em segundos
   console.log("TEMPO INICIO " + elapsed);
   var newDuration = initialDuration - elapsed; // Duração atualizada da animação
   console.log("TEMPO CALCULADO " + newDuration);
@@ -77,6 +78,11 @@ function increaseAnimationSpeed(timestamp) {
 
   // Chama a função novamente na próxima renderização
   requestAnimationFrame(increaseAnimationSpeed);
+
+//   // Chama a função novamente na próxima renderização
+//   setTimeout(function () {
+//     requestAnimationFrame(increaseAnimationSpeed);
+//   }, 5000); // Aguarda 10 segundos para chamar novamente a função
 }
 
 // Inicia a função para aumentar a velocidade da animação
@@ -95,6 +101,15 @@ function playMusic() {
 
 function pauseMusic() {
     var audio = document.getElementById("audioContainer");
+    audio.pause();
+}
+
+function playMusicGameOver() {
+    document.getElementById("audioContainerGameOver").play();
+}
+
+function pauseMusicGameOver() {
+    var audio = document.getElementById("audioContainerGameOver");
     audio.pause();
 }
 
