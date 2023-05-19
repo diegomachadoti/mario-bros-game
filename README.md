@@ -12,6 +12,7 @@
 ## Itens para evoluir
 
 -   De acordo com o tempo ir acelerando a velocidade
+    -   FEITO
 -   Adicionar um score com a pontuação
 -   Alternar os objetos pipe adicionando dificuldade
 
@@ -21,5 +22,6 @@
 -   [Extensão VsCode Live Server](https://github.com/ritwickdey/vscode-live-server-plus-plus)
 -   [Badges README](https://simpleicons.org/)
 
-----
+---
+
 ![YOUR github stats](https://github-readme-stats.vercel.app/api?username=diegomachadoti)

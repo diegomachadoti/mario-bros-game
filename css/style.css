@@ -16,7 +16,7 @@ body {
 
 /*Botão cabeçalho*/
 button {
-    /*background-color: #000000;*/
+    background-color: #000000;
     position: fixed;
     left: 13vw; /* Definir a posição horizontal usando vh o objeto fica fixo */
     top: 40px; /* Definir a posição vertical em pixels */
@@ -24,19 +24,19 @@ button {
     width: 200px;
     padding: 15px 0;
     text-align: center;
-    margin: 125px;
+    margin: 60px;
     margin-top: 50px;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    border: 2px solid #fc0000;
-    background: transparent;
+    border: 2px solid #000000;
+    /*background: transparent;*/
     color: rgb(255, 255, 255);
     cursor: pointer;
     overflow: hidden;
     /*text-transform: uppercase;*/
 }
 button::before {
-    background: #3eff37;
+    background: #000000;
     height: 100%;
     width: 0;
     position: fixed;

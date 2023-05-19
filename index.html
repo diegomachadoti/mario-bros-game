@@ -22,19 +22,19 @@
     </head>
     <body style="background-image: url('./images/background-super-mario-bros-one.jpg')"></body>
 
-    <div class="image-container">
-        <div style="display: flex; align-items: center; justify-content: space-between;">
-            <img src="./images/mario-kart-logo-png.png" alt="Imagem PNG" style=" top: 1; width: 200px; height: 145px;" />
-            <button id="reloadButton">Reiniciar o Jogo</button>
+        <div class="image-container">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <img src="./images/mario-kart-logo-png.png" alt="Imagem PNG" style=" top: 1; width: 200px; height: 145px;" />  
         </div>
-    
-        <script>
-            document.getElementById("reloadButton").addEventListener("click", function() {
+
+        <div>
+            <button id="reloadButton">Reiniciar o Jogo</button>
+                <script>
+                document.getElementById("reloadButton").addEventListener("click", function() {
                 location.reload();
-            });
-            
-            
-        </script>
+                });
+                </script>
+        </div>
 
         <div class="game-board">
             <img src="./images/clouds.png" class="clouds" />
@@ -42,6 +42,7 @@
             <img src="./images/pipe.png" class="pipe" />
             <img src="./images/mario-game-over.png" class="gameOver" />
         </div>
+        
 
         <div>
             <audio id="audioContainer" controls style="display: none;">
