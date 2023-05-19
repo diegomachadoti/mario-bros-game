@@ -17,7 +17,7 @@ const jump = () => {
 /* Logica quando o deslocamento do pipe com o mario encostar o jogo acabe no caso fazer um replace na imagem do mario */
 const loop = setInterval(() => {
     console.log("loop");
-    playMusic();
+    // playMusic();
 
     const pipePosition = pipe.offsetLeft; // delocamento esquerdo
     const marioPosition = +window
@@ -47,6 +47,46 @@ const loop = setInterval(() => {
         pauseMusic();
     }
 }, 10);
+
+
+
+
+
+// Atualizando a velocidade do pipe conforme o tempo
+var pipeElement = document.querySelector('.pipe');
+var initialDuration = 2; // Duração inicial da animação em segundos
+var animationStart = null;
+
+function increaseAnimationSpeed(timestamp) {
+  if (!animationStart) {
+    animationStart = timestamp; // Salva o tempo de início da animação
+  }
+
+  var elapsed = (timestamp - animationStart) / 10000; // Tempo decorrido em segundos
+  console.log("TEMPO INICIO " + elapsed);
+  var newDuration = initialDuration - elapsed; // Duração atualizada da animação
+  console.log("TEMPO CALCULADO " + newDuration);
+
+  if (newDuration <= 0) {
+    newDuration = 0.1; // Defina um valor mínimo para a duração
+  }
+
+  // Atualiza a propriedade de animação com a nova duração
+  var timeAtual = pipeElement.style.animationDuration = newDuration + 's';
+  console.log("TEMPO ATUAL " + timeAtual);
+
+  // Chama a função novamente na próxima renderização
+  requestAnimationFrame(increaseAnimationSpeed);
+}
+
+// Inicia a função para aumentar a velocidade da animação
+requestAnimationFrame(increaseAnimationSpeed);
+
+
+
+
+
+
 
 /* Função para tocar música */
 function playMusic() {
