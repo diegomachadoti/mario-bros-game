@@ -81,7 +81,13 @@ button:hover::before {
 .clouds {
     position: absolute;
     width: 400px;
-    animation: clouds-animation 20s infinite linear;
+    animation: clouds-animation 13s infinite linear;
+}
+
+.cloudsTwo {
+    position: absolute;
+    width: 400px;
+    animation: clouds-animationTwo 18s infinite linear;
 }
 
 /* Objeto gameOver */
@@ -151,6 +157,35 @@ button:hover::before {
     to {
         right: 100%;
     }
+}
+
+@keyframes clouds-animationTwo {
+    
+	0% {
+        right: -400px;
+    }
+	1% {
+        right: -400px;
+    }
+	10% {
+        right: -400px;
+    }
+	20% {
+        right: -400px;
+    }
+    100% {
+        right: 100%;
+    }
+	
+	
+	/*
+	from {
+        right: -400px;
+    }
+
+    to {
+        right: 100%;
+    }*/
 }
 
 @keyframes fallAnimation {
